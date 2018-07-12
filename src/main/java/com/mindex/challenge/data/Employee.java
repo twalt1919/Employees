@@ -13,6 +13,11 @@ public class Employee {
     public Employee() {
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" + "employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + ", position=" + position + ", department=" + department + ", directReports=" + directReports + '}';
+    }
+
     public String getEmployeeId() {
         return employeeId;
     }

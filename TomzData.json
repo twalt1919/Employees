@@ -1,0 +1,29 @@
+http://localhost:8080/employee/9084df18-1088-45d2-81fd-ff084c73b987
+http://localhost:8080/employee/e1c6f40d-ae10-4501-a224-c39d42900deb
+http://localhost:8080/employee/3ad1dd8f-d575-4952-bd99-9a914dadee8b
+http://localhost:8080/employee/
+
+{
+    "employeeId": "9084df18-1088-45d2-81fd-ff084c73b987",
+    "firstName": null,
+    "lastName": null,
+    "position": null,
+    "department": null,
+    "directReports": null
+}
+{
+    "employeeId": "e1c6f40d-ae10-4501-a224-c39d42900deb",
+    "firstName": "Al",
+    "lastName": "Aardvark",
+    "position": "worker bee",
+    "department": null,
+    "directReports": null
+}
+{
+    "employeeId": "3ad1dd8f-d575-4952-bd99-9a914dadee8b",
+    "firstName": "Bob",
+    "lastName": "Benz",
+    "position": "worker bee",
+    "department": "manufacturing",
+    "directReports": null
+}
