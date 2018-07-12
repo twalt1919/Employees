@@ -13,6 +13,10 @@
 #IDE files / folders:
 .gradle
 build
+.settings
+bin
+.classpath
+.project
 
 # Package Files #
 *.jar
