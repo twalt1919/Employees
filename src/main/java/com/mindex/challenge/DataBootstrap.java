@@ -29,6 +29,8 @@ public class DataBootstrap {
     private CompensationRepository compensationRepository;
     @Autowired
     private EmployeeRepository employeeRepository;
+    @Autowired
+    private ReportingStructureRepository reportingStructureRepository;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -58,6 +60,14 @@ public class DataBootstrap {
         }
         for (Employee employee : employees) {
             employeeRepository.insert(employee);
+            
+            // next, insert a reporting structure for the current employee
+            ReportingStructure rs = new ReportingStructure();
+            rs.setEmployeeId(employee.getEmployeeId());
+            rs.setNumberOfReports(0);
+            reportingStructureRepository.insert(rs);
         }
+
+        // TODO: add logic calculate NumberOfReports on the fly
     }
 }
