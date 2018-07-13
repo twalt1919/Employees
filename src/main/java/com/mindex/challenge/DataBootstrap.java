@@ -42,11 +42,20 @@ public class DataBootstrap {
         Employee[] employees = null;
 
         try {
+        	compensations = objectMapper.readValue(inputStreamCompensation, Compensation[].class);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
             employees = objectMapper.readValue(inputStreamEmployee, Employee[].class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
+        for (Compensation compensation : compensations) {
+        	compensationRepository.insert(compensation);
+        }
         for (Employee employee : employees) {
             employeeRepository.insert(employee);
         }
