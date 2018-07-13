@@ -24,14 +24,11 @@ import java.util.Date;
 public class DataBootstrap {
     private static final String COMPENSATION_LOCATION = "/static/compensation_database.json";
     private static final String EMPLOYEE_LOCATION = "/static/employee_database.json";
-    private static final String REPORTINGSTRUCTURE_LOCATION = "/static/reportingstructure_database.json";
 
     @Autowired
     private CompensationRepository compensationRepository;
     @Autowired
     private EmployeeRepository employeeRepository;
-    @Autowired
-    private ReportingStructureRepository reportingStructureRepository;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -40,11 +37,9 @@ public class DataBootstrap {
     public void init() {
         InputStream inputStreamCompensation = this.getClass().getResourceAsStream(COMPENSATION_LOCATION);
         InputStream inputStreamEmployee = this.getClass().getResourceAsStream(EMPLOYEE_LOCATION);
-        InputStream inputStreamReportingStructure = this.getClass().getResourceAsStream(REPORTINGSTRUCTURE_LOCATION);
 
         Compensation[] compensations = null;
         Employee[] employees = null;
-        ReportingStructure[] reportingStructures = null;
 
         try {
             employees = objectMapper.readValue(inputStreamEmployee, Employee[].class);
