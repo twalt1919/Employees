@@ -2,32 +2,32 @@ package com.mindex.challenge.data;
 
 /**
  * The organization hierarchy details for each employee
- * @author twalt
+ * @author Tom Walters
  */
 public class ReportingStructure {
-    private Employee employee;
+    private String employeeId;
     private int numberOfReports;
 
     public ReportingStructure() {}
 
     @Override
     public String toString() {
-        return "ReportingStructure{" + "employee=" + employee + ", numberOfReports=" + numberOfReports + '}';
+        return "ReportingStructure{" + "employeeId=" + employeeId + ", numberOfReports=" + numberOfReports + '}';
     }
 
     /**
-     * @return the employee
+     * @return the employee Id
      */
-    public Employee getEmployee() {
-        return employee;
-    }
+    public String getEmployeeId() {
+		return employeeId;
+	}
 
     /**
-     * @param employee the employee to set
+     * @param employeeId the employeeId to set
      */
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
 
     /**
      * @return the numberOfReports
