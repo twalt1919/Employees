@@ -2,10 +2,10 @@ package com.mindex.challenge.data;
 
 /**
  * The salary and effective date for each employee
- * @author twalt
+ * @author Tom Walters
  */
 public class Compensation {
-    private Employee employee;
+    private String employeeId;
     private int salary;
     private String effectiveDate;
 
@@ -13,24 +13,24 @@ public class Compensation {
 
     @Override
     public String toString() {
-        return "Compensation{" + "employee=" + employee + ", salary=" + salary + ", effectiveDate=" + effectiveDate + '}';
+        return "Compensation{" + "employeeId=" + employeeId + ", salary=" + salary + ", effectiveDate=" + effectiveDate + '}';
     }
 
     /**
-     * @return the employee
+     * @return the employee Id
      */
-    public Employee getEmployee() {
-        return employee;
-    }
+    public String getEmployeeId() {
+		return employeeId;
+	}
 
     /**
-     * @param employee the employee to set
+     * @param employeeId the employeeId to set
      */
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
+	}
 
-    /**
+	/**
      * @return the salary
      */
     public int getSalary() {
