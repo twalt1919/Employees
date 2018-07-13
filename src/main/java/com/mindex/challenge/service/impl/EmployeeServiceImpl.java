@@ -10,6 +10,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+/**
+ * The thin wrapper between the end-points and the data "repository"
+ * @author Tom Walters
+ *
+ */
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
